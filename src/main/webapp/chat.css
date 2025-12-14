@@ -1,0 +1,214 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+/* 用户信息区域 */
+.user-info {
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.navigation {
+    margin: 15px 0;
+}
+
+.navigation a {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 15px;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.navigation a:hover {
+    background-color: #e9ecef;
+}
+
+/* 在线用户列表 */
+.online-users {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.user-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.user-item {
+    padding: 8px 12px;
+    background-color: #e9ecef;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.user-item.current-user {
+    background-color: #cfe2ff;
+    border: 1px solid #007bff;
+}
+
+.online-indicator {
+    color: #28a745;
+    font-size: 12px;
+}
+
+/* 聊天历史区域 */
+.chat-history {
+    height: 400px;
+    overflow-y: auto;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+/* 消息样式 */
+.message {
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.message.sent {
+    background-color: #dcf8c6;
+    margin-left: auto;
+    border-bottom-right-radius: 2px;
+}
+
+.message.received {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    margin-right: auto;
+    border-bottom-left-radius: 2px;
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #666;
+}
+
+.message-content {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.timestamp {
+    font-size: 11px;
+    color: #999;
+}
+
+/* 聊天控制区域 */
+.chat-controls {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.chat-mode-selector {
+    margin-bottom: 15px;
+}
+
+.chat-mode-selector select,
+#private-user-container select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 200px;
+}
+
+/* 消息输入区域 */
+.message-input {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.message-input textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    resize: vertical;
+    margin-bottom: 10px;
+}
+
+.message-input input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.message-input input[type="submit"]:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.message-input input[type="submit"]:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+/* 警告和错误信息 */
+.warning, .error-message {
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    color: #856404;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .chat-history {
+        height: 300px;
+    }
+
+    .chat-mode-selector select,
+    #private-user-container select {
+        width: 100%;
+    }
+
+    .message {
+        max-width: 85%;
+    }
+}
